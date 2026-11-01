@@ -1,0 +1,54 @@
+{
+    "editor.renderWhitespace": "trailing",
+    "files.eol": "\n",
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "files.autoSave": "afterDelay",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "workbench.editor.empty.hint": "hidden",
+    "prettier.semi": false,
+    "prettier.tabWidth": 3,
+    "prettier.trailingComma": "none",
+    "chat.agent.enabled": false,
+    "redhat.telemetry.enabled": true,
+    "editor.largeFileOptimizations": false,
+    "window.newWindowProfile": "Default",
+    "window.zoomLevel": -1,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "razor.format.enable": false,
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "files.exclude": {
+        "**/*.uid": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.colorTheme": "Dark Modern",
+    "liveServer.settings.donotVerifyTags": true,
+    "editor.unicodeHighlight.allowedCharacters": {
+        " ": true
+    },
+    "terminal.integrated.cursorStyle": "line",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "[csv]": {
+        "editor.inlayHints.maximumLength": 0
+    },
+    "workbench.experimental.modernUI": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+    ],
+    "eslint.run": "onType",
+    "eslint.format.enable": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "chat.disableAIFeatures": true,
+    "editor.fontSize": 13
+}

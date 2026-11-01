@@ -1,0 +1,10 @@
+[core]
+autocrlf = false
+[user]
+name = name name
+email = name.name@email.com
+[alias]
+co = commit
+st = status
+lg = "log --date=short --pretty=format:'%ci %s'"
+
