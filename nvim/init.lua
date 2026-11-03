@@ -9,7 +9,6 @@ vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k')
 vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l')
 
 -- Plugins (vim-plug)
--- Install: :PlugInstall (?)
 local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 Plug('nvim-treesitter/nvim-treesitter', { ['branch'] = 'master', ['do'] = ':TSUpdate' })
@@ -20,10 +19,17 @@ vim.call('plug#end')
 local ok, ts = pcall(require, 'nvim-treesitter.configs')
 if ok then
   ts.setup {
-    ensure_installed = { 'python', 'javascript', 'html' },
+    ensure_installed = { 'python', 'javascript', 'html', 'rust' },
     highlight = { enable = true },
   }
 end
+
+vim.lsp.config('rust_analyzer', {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = { 'Cargo.toml', '.git' },
+})
+vim.lsp.enable('rust_analyzer')
 
 local ok2, autopairs = pcall(require, 'nvim-autopairs')
 if ok2 then
