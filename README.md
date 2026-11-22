@@ -1,4 +1,5 @@
 # config
+
 My Configuration files for: nvim, git, vscode, and...
-as of october 2026.
-updated when needed
+as of current day
+updated periodically with update.sh
