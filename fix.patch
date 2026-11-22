@@ -1,11 +1,19 @@
---- /home/ubuntu/Desktop/config/ubuntu_terminal/.bash_aliases	2026-11-01 10:15:07.774906759 +0200
-+++ /home/ubuntu/.bash_aliases	2026-11-18 20:42:12.196625025 +0200
-@@ -2,3 +2,8 @@
- alias python=python3
- alias py=python3
- alias cd..='cd ..'
-+alias sql=sqlite3
-+alias tietok='cd /home/ubuntu/Tamk/tamk-4A00HB48-3003-tietokanta-jatkokurssi' 
-+alias airdrop='/home/ubuntu/.local/share/gnome-shell/extensions/WinXMenu@tuukkaflink.com/owly-bg.sh'
-+md() { mkdir -p -- "$1" && cd -- "$1"; }
-+
+--- /home/ubuntu/Desktop/config/vscode/settings.json	2026-11-01 10:05:08.211194361 +0200
++++ /home/ubuntu/.config/Code/User/settings.json	2026-11-18 11:30:09.211809147 +0200
+@@ -50,5 +50,13 @@
+         "editor.tabSize": 2
+     },
+     "chat.disableAIFeatures": true,
+-    "editor.fontSize": 13
+-}
++    "editor.fontSize": 13,
++    "terminal.integrated.initialHint": false,
++    "markdownlint.run": "onSave",
++    "python.createEnvironment.trigger": "off",
++    "cSpell.userWords": [
++        "Flink",
++        "tuukka"
++    ],
++    "workbench.browser.openLocalhostLinks": false
++}
+\ No newline at end of file

@@ -50,5 +50,13 @@
         "editor.tabSize": 2
     },
     "chat.disableAIFeatures": true,
-    "editor.fontSize": 13
+    "editor.fontSize": 13,
+    "terminal.integrated.initialHint": false,
+    "markdownlint.run": "onSave",
+    "python.createEnvironment.trigger": "off",
+    "cSpell.userWords": [
+        "Flink",
+        "tuukka"
+    ],
+    "workbench.browser.openLocalhostLinks": false
 }
