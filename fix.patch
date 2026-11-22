@@ -1,12 +1,11 @@
---- /home/ubuntu/Desktop/config/vscode/settings.json	2026-11-22 14:14:18.336629024 +0200
-+++ /home/ubuntu/.config/Code/User/settings.json	2026-11-22 14:26:48.072661690 +0200
-@@ -56,7 +56,7 @@
-     "python.createEnvironment.trigger": "off",
-     "cSpell.userWords": [
-         "Flink",
--        "tuukka"
-+        "Tuukka"
-     ],
-     "workbench.browser.openLocalhostLinks": false
- }
-\ No newline at end of file
+--- /home/ubuntu/Desktop/config/ubuntu_terminal/.bash_aliases	2026-11-22 14:30:47.644899516 +0200
++++ /home/ubuntu/.bash_aliases	2026-11-22 14:31:47.735711646 +0200
+@@ -2,7 +2,7 @@
+ alias py=python3
+ alias cd..='cd ..'
+ alias sql=sqlite3
+-alias tietok='cd /home/ubuntu/Tamk/tamk-4A00HB48-3003-tietokanta-jatkokurssi' 
++alias tieto='cd /home/ubuntu/Tamk/tamk-4A00HB48-3003-tietokanta-jatkokurssi' 
+ alias airdrop='/home/ubuntu/.local/share/gnome-shell/extensions/WinXMenu@tuukkaflink.com/owly-bg.sh'
+ md() { mkdir -p -- "$1" && cd -- "$1"; }
+ 
