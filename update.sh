@@ -16,16 +16,21 @@ cd /home/ubuntu/Desktop/config || exit 1
 
 difference() {
     if diff -q $1 $2 > /dev/null; then
-        echo "no difference between files $1 and $2"
+        return 1
+        #echo "no difference between files $1 and $2"
+        #notify-send "config file checked no differences"
 
     else
-        echo "difference in files"
+        echo "difference in files $1 and $2"
         diff -u $1 $2 > fix.patch
         patch $1 < fix.patch
         git add -A
         SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         echo $SUMMARY
         git commit -m "Update config auto comm" -m "$SUMMARY"
+        rm fix.patch
+        notify-send "difference in config file check and push"
+        echo "difference in config file check and push"
     fi
 }
 
