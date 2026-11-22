@@ -1,10 +1,17 @@
 [core]
 autocrlf = false
 [user]
-name = name name
-email = name.name@email.com
+name = Tuukka Flink
+email = tuukka.flink@icloud.com
 [alias]
 co = commit
 st = status
 lg = "log --date=short --pretty=format:'%ci %s'"
 
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

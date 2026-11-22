@@ -21,17 +21,15 @@ difference() {
     else
         echo "difference in files"
         diff -u $1 $2 > fix.patch
-        patch test.txt < fix.patch
+        patch $1 < fix.patch
         git add -A
         SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         echo $SUMMARY
         git commit -m "Update config auto comm" -m "$SUMMARY"
-
-
     fi
 }
 
-difference test.txt test1.txt
+difference $GIT_GIT $GIT
 
 
 

@@ -1,8 +1,22 @@
---- test.txt	2026-11-22 14:08:09.526748597 +0200
-+++ test1.txt	2026-11-22 13:14:14.702429203 +0200
-@@ -1,5 +1 @@
- same
--asd
--asdasd
--d
--hgh
+--- /home/ubuntu/Desktop/config/git/.gitconfig	2026-11-01 10:19:04.536453945 +0200
++++ /home/ubuntu/.gitconfig	2026-10-26 22:34:10.389633534 +0200
+@@ -1,10 +1,17 @@
+ [core]
+ autocrlf = false
+ [user]
+-name = name name
+-email = name.name@email.com
++name = Tuukka Flink
++email = tuukka.flink@icloud.com
+ [alias]
+ co = commit
+ st = status
+ lg = "log --date=short --pretty=format:'%ci %s'"
+ 
++
++[credential "https://github.com"]
++	helper = 
++	helper = !/usr/bin/gh auth git-credential
++[credential "https://gist.github.com"]
++	helper = 
++	helper = !/usr/bin/gh auth git-credential
