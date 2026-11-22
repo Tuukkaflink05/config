@@ -1,6 +1,5 @@
 alias cls=clear
 alias py=python3
-alias cld=clear
 alias cd..='cd ..'
 alias sql=sqlite3
 alias tietok='cd /home/ubuntu/Tamk/tamk-4A00HB48-3003-tietokanta-jatkokurssi' 

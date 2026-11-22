@@ -12,9 +12,11 @@ NVIM="/home/ubuntu/.config/nvim/init.lua"
 UBUNTU="/home/ubuntu/.bash_aliases"
 VSCODE="/home/ubuntu/.config/Code/User/settings.json"
 
+COMMITED=false
+
 cd /home/ubuntu/Desktop/config || exit 1
 
-echo "config update running"
+echo "config update running \n"
 
 difference() {
     if diff -q $1 $2 > /dev/null; then
@@ -23,6 +25,7 @@ difference() {
         #notify-send "config file checked no differences"
 
     else
+        COMMITED=true
         echo "difference in files $1 and $2"
         diff -u $1 $2 > fix.patch
         patch $1 < fix.patch
@@ -30,9 +33,7 @@ difference() {
         git add -A
         SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         echo $SUMMARY
-        git commit -m "Update config auto comm" -m "$SUMMARY"
-
-        echo "\n\n difference in config file check and push"
+        git commit -m "update.sh auto commit" -m "$SUMMARY"
     fi
 }
 
@@ -41,5 +42,16 @@ difference $GIT_NVIM $NVIM
 difference $GIT_UBUNTU $UBUNTU
 difference $GIT_VSCODE $VSCODE
 
+echo "\n"
 
+if "$COMMITED"; then
+    echo "\n\n differences in config files trying to push \n"
 
+    if GIT_TERMINAL_PROMPT=0 git push; then
+        echo "automatically Pushed to remote"
+    else
+        echo "push failed check and push manually"
+    fi
+else
+    echo "update script ran but no differences so no pushes"
+fi
