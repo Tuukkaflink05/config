@@ -1,22 +1,11 @@
---- /home/ubuntu/Desktop/config/git/.gitconfig	2026-11-01 10:19:04.536453945 +0200
-+++ /home/ubuntu/.gitconfig	2026-10-26 22:34:10.389633534 +0200
-@@ -1,10 +1,17 @@
- [core]
- autocrlf = false
- [user]
--name = name name
--email = name.name@email.com
-+name = Tuukka Flink
-+email = tuukka.flink@icloud.com
- [alias]
- co = commit
- st = status
- lg = "log --date=short --pretty=format:'%ci %s'"
- 
+--- /home/ubuntu/Desktop/config/ubuntu_terminal/.bash_aliases	2026-11-01 10:15:07.774906759 +0200
++++ /home/ubuntu/.bash_aliases	2026-11-18 20:42:12.196625025 +0200
+@@ -2,3 +2,8 @@
+ alias python=python3
+ alias py=python3
+ alias cd..='cd ..'
++alias sql=sqlite3
++alias tietok='cd /home/ubuntu/Tamk/tamk-4A00HB48-3003-tietokanta-jatkokurssi' 
++alias airdrop='/home/ubuntu/.local/share/gnome-shell/extensions/WinXMenu@tuukkaflink.com/owly-bg.sh'
++md() { mkdir -p -- "$1" && cd -- "$1"; }
 +
-+[credential "https://github.com"]
-+	helper = 
-+	helper = !/usr/bin/gh auth git-credential
-+[credential "https://gist.github.com"]
-+	helper = 
-+	helper = !/usr/bin/gh auth git-credential

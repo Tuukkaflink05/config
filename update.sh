@@ -16,7 +16,7 @@ cd /home/ubuntu/Desktop/config || exit 1
 
 difference() {
     if diff -q $1 $2 > /dev/null; then
-        echo "no difference between files"
+        echo "no difference between files $1 and $2"
 
     else
         echo "difference in files"
@@ -30,6 +30,9 @@ difference() {
 }
 
 difference $GIT_GIT $GIT
+difference $GIT_NVIM $NVIM
+difference $GIT_UBUNTU $UBUNTU
+difference $GIT_VSCODE $VSCODE
 
 
 
