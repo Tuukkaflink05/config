@@ -29,9 +29,9 @@ difference() {
         echo "difference in files $1 and $2"
         diff -u $1 $2 > fix.patch
         patch $1 < fix.patch
+        SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         rm fix.patch
         git add -A
-        SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         echo $SUMMARY
         git commit -m "update.sh auto commit" -m "$SUMMARY"
     fi
