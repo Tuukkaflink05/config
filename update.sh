@@ -2,19 +2,21 @@
 #file update.sh
 #automatically get differences in config files add and commit them to git
 
-GIT_GIT="/home/ubuntu/Desktop/config/git/.gitconfig"
-GIT_NVIM="/home/ubuntu/Desktop/config/nvim/init.lua"
-GIT_UBUNTU="/home/ubuntu/Desktop/config/ubuntu_terminal/.bash_aliases"
-GIT_VSCODE="/home/ubuntu/Desktop/config/vscode/settings.json"
+USERNAME="flink"
 
-GIT="/home/ubuntu/.gitconfig"
-NVIM="/home/ubuntu/.config/nvim/init.lua"
-UBUNTU="/home/ubuntu/.bash_aliases"
-VSCODE="/home/ubuntu/.config/Code/User/settings.json"
+GIT_GIT="/home/$USERNAME/Desktop/config/git/.gitconfig"
+GIT_NVIM="/home/$USERNAME/Desktop/config/nvim/init.lua"
+GIT_UBUNTU="/home/$USERNAME/Desktop/config/ubuntu_terminal/.bash_aliases"
+GIT_VSCODE="/home/$USERNAME/Desktop/config/vscode/settings.json"
+
+GIT="/home/$USERNAME/.gitconfig"
+NVIM="/home/$USERNAME/.config/nvim/init.lua"
+UBUNTU="/home/$USERNAME/.bash_aliases"
+VSCODE="/home/$USERNAME/.config/Code/User/settings.json"
 
 COMMITED=false
 
-cd /home/ubuntu/Desktop/config || exit 1
+cd /home/$USERNAME/Desktop/config || exit 1
 
 echo "config update running \n"
 
