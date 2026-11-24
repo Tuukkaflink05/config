@@ -58,5 +58,8 @@
         "Flink",
         "Tuukka"
     ],
-    "workbench.browser.openLocalhostLinks": false
+    "workbench.browser.openLocalhostLinks": false,
+    "editor.pasteAs.preferences": [
+        
+    ]
 }
