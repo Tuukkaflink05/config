@@ -16,8 +16,9 @@ NVIM="/home/$USERNAME/.config/nvim/init.lua"
 UBUNTU="/home/$USERNAME/.bash_aliases"
 VSCODE="/home/$USERNAME/.config/Code/User/settings.json"
 
-COMMITED=false
+PACKAGES="/home/$USERNAME/Desktop/config/apt_packages/packages.txt"
 
+COMMITED=false
 
 
 echo "config update running \n"
@@ -29,22 +30,32 @@ difference() {
         #notify-send "config file checked no differences"
 
     else
-        COMMITED=true
         echo "difference in files $1 and $2"
         diff -u $1 $2 > fix.patch
         patch $1 < fix.patch
         SUMMARY=$(grep -E '^(---|\+\+\+|@@ )' fix.patch)
         rm fix.patch
-        git add -A
-        echo $SUMMARY
-        git commit -m "update.sh auto commit" -m "$SUMMARY"
+        add_commit $SUMMARY
     fi
+}
+
+add_commit() {
+    COMMITED=true
+    git add -A
+    echo $1
+    git commit -m "update.sh auto commit" -m "$1"
 }
 
 difference $GIT_GIT $GIT
 difference $GIT_NVIM $NVIM
 difference $GIT_UBUNTU $UBUNTU
 difference $GIT_VSCODE $VSCODE
+
+apt-mark showmanual > $PACKAGES
+
+if git diff $PACKAGES; then
+    add_commit "update packages"
+fi
 
 echo "\n"
 
