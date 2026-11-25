@@ -1,6 +1,8 @@
 #! /bin/sh
 #file update.sh
-#automatically get differences in config files add and commit them to git
+#automatically get differences in config files add and commit them to git, perhaps even push
+
+cd /home/$USERNAME/Desktop/config || exit 1
 
 USERNAME="flink"
 
@@ -16,7 +18,7 @@ VSCODE="/home/$USERNAME/.config/Code/User/settings.json"
 
 COMMITED=false
 
-cd /home/$USERNAME/Desktop/config || exit 1
+
 
 echo "config update running \n"
 
