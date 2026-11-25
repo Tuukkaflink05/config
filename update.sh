@@ -56,7 +56,7 @@ apt-mark showmanual > $PACKAGES
 if git diff $PACKAGES; then
     add_commit "update packages"
 fi
-
+##
 echo "\n"
 
 if "$COMMITED"; then
