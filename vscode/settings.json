@@ -59,7 +59,8 @@
         "Tuukka"
     ],
     "workbench.browser.openLocalhostLinks": false,
-    "editor.pasteAs.preferences": [
-        
-    ]
+    "editor.pasteAs.preferences": [],
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
 }
